@@ -1,0 +1,17 @@
+#########################
+#                       #
+#   HidePlayers (v3.0)  #
+#   By Roomiiaan        #
+#                       #
+#########################
+
+# If you have any suggestions, write a comment in the discussion thread of my plugin
+# Wenn du irgendwelche Vorschläge hast, schreibe einen Kommentar im Discussion Thread von meinem Plugin
+
+Prefix: '&6HidePlayers &8»'
+
+ConsoleEnablingMessage: '&aPlugin was successfully loaded!'
+
+#
+# Auf welchem Slot soll das Hide Player Item sein?
+ItemSlot: 6
