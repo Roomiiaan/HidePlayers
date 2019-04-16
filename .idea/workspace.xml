@@ -27,11 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/romian/hideplayers/listener/PlayerJoinListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
               <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/romian/hideplayers/manager/StateManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,6 +114,7 @@
         <option value="$PROJECT_DIR$/src/main/java/de/romian/hideplayers/manager/ItemManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/romian/hideplayers/HidePlayers.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/romian/hideplayers/listener/PlayerJoinListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/romian/hideplayers/manager/StateManager.java" />
       </list>
     </option>
   </component>
@@ -254,12 +267,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555255322016</updated>
       <workItem from="1555255326002" duration="8331000" />
-      <workItem from="1555275325862" duration="6088000" />
+      <workItem from="1555275325862" duration="7039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14419000" />
+    <option name="totallyTimeSpent" value="15370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -356,6 +369,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="10" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/romian/hideplayers/manager/StateManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="81" selection-start-line="11" selection-start-column="81" selection-end-line="11" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
