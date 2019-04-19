@@ -24,15 +24,30 @@ public class StateManager {
     // Load saved hiding state of player from file
     public void loadHidingState(Player player) {
 
+        hidingStates.put(player, getHidingStateFromFile(player));
     }
 
-    public int getHidingState(Player player) {
+    // Store current hiding state of player
+    public void saveHidingState(Player player) {
 
-        return hidingStates.get(player);
+        saveHidingStateToFile(player);
     }
 
-    // Getter for hashmap
-    public HashMap getHidingStatesMap() { return hidingStates; }
+    // Get hiding state of player from hashmap
+    public int getHidingState(Player player) { return hidingStates.get(player); }
+
+    // Get hiding state of player from file
+    private int getHidingStateFromFile(Player player) {
+
+        return config.getInt(player.getUniqueId().toString());
+    }
+
+    // Save current hiding state of player in file
+    private void saveHidingStateToFile(Player player) {
+
+        config.set(player.getUniqueId().toString(), hidingStates.get(player));
+        saveConfig();
+    }
 
     // Method for creating yml file
     private void createFile() {
@@ -55,5 +70,21 @@ public class StateManager {
         }
 
     }
+
+    // Method for saving yml file
+    private void saveConfig() {
+
+        try {
+
+            config.save(file);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    // Getter for hashmap
+    //public HashMap getHidingStatesMap() { return hidingStates; }
 
 }
