@@ -34,6 +34,11 @@ public class ConfigManager {
         return instance.getConfig().getInt(path);
     }
 
+    public boolean getBoolean(String path) {
+
+        return instance.getConfig().getBoolean(path);
+    }
+
     private String translateString(String stringToTranslate) {
 
         return ChatColor.translateAlternateColorCodes('&', stringToTranslate);

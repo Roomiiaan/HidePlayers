@@ -29,6 +29,10 @@ public class PlayerJoinListener implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
+        // Return if "give item on join" is set to false
+        if(!configManager.getBoolean("GiveItemOnJoin"))
+            return;
+
         stateManager.loadHidingState(player);
 
         player.getInventory().setItem(itemSlot, (stateManager.getHidingState(player) == 1 ? itemManager.getHideItem() : itemManager.getShowStack()));
