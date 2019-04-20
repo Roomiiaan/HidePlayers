@@ -31,6 +31,13 @@ public class StateManager {
     public void saveHidingState(Player player) {
 
         saveHidingStateToFile(player);
+        hidingStates.remove(player);
+    }
+
+    // Change hiding state
+    public void changeHidingState(Player player) {
+
+        hidingStates.put(player, (hidingStates.get(player) == 1 ? 2 : 1));
     }
 
     // Get hiding state of player from hashmap
