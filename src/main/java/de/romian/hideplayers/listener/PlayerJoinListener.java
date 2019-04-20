@@ -21,6 +21,7 @@ public class PlayerJoinListener implements Listener {
     public PlayerJoinListener(ConfigManager configManager, ItemManager itemManager, StateManager stateManager) {
         this.configManager = configManager;
         this.itemManager = itemManager;
+        this.stateManager = stateManager;
 
         itemSlot = configManager.getInt("ItemSlot") + 1;
     }
