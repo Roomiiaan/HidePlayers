@@ -2,6 +2,7 @@ package de.romian.hideplayers.listener;
 
 import de.romian.hideplayers.manager.ConfigManager;
 import de.romian.hideplayers.manager.ItemManager;
+import de.romian.hideplayers.manager.StateManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -13,10 +14,11 @@ public class PlayerJoinListener implements Listener {
     // Define local variables
     private ConfigManager configManager;
     private ItemManager itemManager;
+    private StateManager stateManager;
     private int itemSlot = 0;
 
     // Initialize local variables
-    public PlayerJoinListener(ConfigManager configManager, ItemManager itemManager) {
+    public PlayerJoinListener(ConfigManager configManager, ItemManager itemManager, StateManager stateManager) {
         this.configManager = configManager;
         this.itemManager = itemManager;
 
@@ -27,8 +29,9 @@ public class PlayerJoinListener implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
-        //player.getInventory().setItem(itemSlot, );
+        stateManager.loadHidingState(player);
 
+        player.getInventory().setItem(itemSlot, (stateManager.getHidingState(player) == 1 ? itemManager.getHideItem() : itemManager.getShowStack()));
     }
 
 }

@@ -1,7 +1,9 @@
 package de.romian.hideplayers;
 
+import de.romian.hideplayers.listener.PlayerJoinListener;
 import de.romian.hideplayers.manager.ConfigManager;
 import de.romian.hideplayers.manager.ItemManager;
+import de.romian.hideplayers.manager.StateManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,10 +25,19 @@ public class HidePlayers extends JavaPlugin {
         // Initialize item manager
         ItemManager itemManager = new ItemManager(configManager);
 
+        // Initialize state manager
+        StateManager stateManager = new StateManager();
+        stateManager.init();
+
         // Initialize local variables
         prefix = configManager.getTranslatedString("Prefix") + " ";
         enablingMessage = configManager.getTranslatedString("ConsoleEnablingMessage");
 
+        // Add event listeners to plugin
+        Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(configManager, itemManager, stateManager), this);
+
+
+        // Send message to console when plugin was loaded
         Bukkit.getConsoleSender().sendMessage(prefix + enablingMessage);
 
     }
