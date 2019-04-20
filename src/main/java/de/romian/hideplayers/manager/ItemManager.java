@@ -39,7 +39,7 @@ public class ItemManager {
             showStack.setItemMeta(showMeta);
             itemLore.clear();
 
-        } catch(NullPointerException exception) {
+        } catch(Exception exception) {
             exception.printStackTrace();
         }
 
