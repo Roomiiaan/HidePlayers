@@ -36,7 +36,7 @@ public class HidePlayers extends JavaPlugin {
 
         // Add event listeners to plugin
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(configManager, itemManager, stateManager), this);
-        Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(stateManager), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(stateManager, configManager), this);
 
         // Send message to console when plugin was loaded
         Bukkit.getConsoleSender().sendMessage(prefix + enablingMessage);

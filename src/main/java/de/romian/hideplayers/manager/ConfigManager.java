@@ -7,6 +7,7 @@ public class ConfigManager {
 
     // Define local variables
     private HidePlayers instance;
+    private boolean saveHidingState;
 
     // Initialize local variables
     public ConfigManager(HidePlayers instance) {
@@ -17,6 +18,7 @@ public class ConfigManager {
     public void init() {
 
         instance.saveDefaultConfig();
+        saveHidingState = getBoolean("SaveHidingState");
     }
 
     public String getString(String path) {
@@ -38,6 +40,8 @@ public class ConfigManager {
 
         return instance.getConfig().getBoolean(path);
     }
+
+    public boolean getSaveHidingState() { return saveHidingState; }
 
     private String translateString(String stringToTranslate) {
 
