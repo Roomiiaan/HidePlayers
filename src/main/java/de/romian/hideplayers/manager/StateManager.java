@@ -43,6 +43,12 @@ public class StateManager {
     // Get hiding state of player from hashmap
     public int getHidingState(Player player) { return hidingStates.get(player); }
 
+    // Set default hiding state in hashmap for player
+    public void setDefaultHidingState(Player player) {
+
+        hidingStates.put(player, 1);
+    }
+
     // Get hiding state of player from file
     private int getHidingStateFromFile(Player player) {
 
