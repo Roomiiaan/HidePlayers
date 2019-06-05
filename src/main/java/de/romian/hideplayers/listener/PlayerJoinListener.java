@@ -15,7 +15,7 @@ public class PlayerJoinListener implements Listener {
     private ConfigManager configManager;
     private ItemManager itemManager;
     private StateManager stateManager;
-    private int itemSlot = 0;
+    private static int itemSlot;
 
     // Initialize local variables
     public PlayerJoinListener(ConfigManager configManager, ItemManager itemManager, StateManager stateManager) {
