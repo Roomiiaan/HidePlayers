@@ -1,2 +1,9 @@
 de\romian\hideplayers\manager\ConfigManager.class
+de\romian\hideplayers\manager\ItemManager.class
+de\romian\hideplayers\manager\StateManager.class
+de\romian\hideplayers\listener\PlayerJoinListener.class
 de\romian\hideplayers\HidePlayers.class
+de\romian\hideplayers\listener\PlayerInteractListener.class
+de\romian\hideplayers\manager\VisibleManager.class
+de\romian\hideplayers\listener\PlayerQuitListener.class
+de\romian\hideplayers\manager\VisibleManager$1.class

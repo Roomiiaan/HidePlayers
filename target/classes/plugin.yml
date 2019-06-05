@@ -1,4 +1,5 @@
 main: de.romian.hideplayers.HidePlayers
 author: Roomiiaan
-version: 1.0
+version: 3.0
 name: HidePlayers
+api-version: 1.14

@@ -48,7 +48,7 @@ public class StateManager {
 
     // Get hiding state of player from file
     private int getHidingStateFromFile(Player player) {
-        return config.getInt(player.getUniqueId().toString());
+        return (config.isSet(player.getUniqueId().toString()) ? config.getInt(player.getUniqueId().toString()) : 1);
     }
 
     // Save current hiding state of player in file

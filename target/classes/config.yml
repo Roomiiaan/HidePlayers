@@ -1,1 +1,47 @@
-# Config Test
+#########################
+#                       #
+#   HidePlayers (v3.0)  #
+#   By Roomiiaan        #
+#                       #
+#########################
+
+# If you have any suggestions, write a comment in the discussion thread of my plugin
+# Wenn du irgendwelche Vorschläge hast, schreibe einen Kommentar im Discussion Thread von meinem Plugin
+
+Prefix: '&6HidePlayers &8»'
+
+ConsoleEnablingMessage: '&aPlugin was successfully loaded!'
+
+#
+#
+HidePlayer:
+  Item: BLAZE_ROD
+  Displayname: '&cHide &7players'
+  Lore: '&7Hide all players on server'
+
+#
+#
+ShowPlayer:
+  Item: STICK
+  Displayname: '§aShow &7players'
+  Lore: '&7Show all players on server'
+
+#
+# Auf welchem Slot soll das Hide Player Item sein?
+ItemSlot: 6
+
+#
+# Sollen die Spieler das Item beim Beitritt auf den Server bekommen?
+GiveItemOnJoin: true
+
+#
+# Können die Spieler das Item im Inventar bewegen?
+CanMoveItem: false
+
+#
+# Soll man das Item droppen können?
+CanDropItem: false
+
+#
+# Soll beim Verlassen des Servers der aktuelle
+SaveHidingState: true

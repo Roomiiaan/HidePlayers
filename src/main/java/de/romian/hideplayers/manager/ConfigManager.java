@@ -8,6 +8,7 @@ public class ConfigManager {
     // Define local variables
     private HidePlayers instance;
     private static boolean saveHidingState;
+    private static boolean giveItemOnJoin;
 
     // Initialize local variables
     public ConfigManager(HidePlayers instance) {
@@ -19,6 +20,7 @@ public class ConfigManager {
 
         instance.saveDefaultConfig();
         saveHidingState = getBoolean("SaveHidingState");
+        giveItemOnJoin = getBoolean("GiveItemOnJoin");
     }
 
     public String getString(String path) {
@@ -38,6 +40,10 @@ public class ConfigManager {
     }
 
     public boolean getSaveHidingState() { return saveHidingState; }
+
+    public boolean getGiveItemOnJoin() {
+        return giveItemOnJoin;
+    }
 
     private String translateString(String stringToTranslate) {
         return ChatColor.translateAlternateColorCodes('&', stringToTranslate);

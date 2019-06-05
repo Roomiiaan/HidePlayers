@@ -34,7 +34,7 @@ public class PlayerJoinListener implements Listener {
             stateManager.setDefaultHidingState(player);
 
         // Return if "give item on join" is set to false
-        if(!configManager.getBoolean("GiveItemOnJoin"))
+        if(!configManager.getGiveItemOnJoin())
             return;
 
         stateManager.loadHidingState(player);
