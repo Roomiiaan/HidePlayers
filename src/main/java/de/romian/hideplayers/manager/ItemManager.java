@@ -12,8 +12,8 @@ public class ItemManager {
 
     // Define local variables
     private ConfigManager configManager;
-    private ItemStack hideStack;
-    private ItemStack showStack;
+    private static ItemStack hideStack;
+    private static ItemStack showStack;
     private ArrayList<String> itemLore = new ArrayList<>();
 
     // Initialize local variables
