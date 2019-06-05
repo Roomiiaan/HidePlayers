@@ -9,9 +9,11 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerQuitListener implements Listener {
 
+    // Define local variables
     private StateManager stateManager;
     private ConfigManager configManager;
 
+    // Initialize local variables
     public PlayerQuitListener(StateManager stateManager, ConfigManager configManager) {
         this.stateManager = stateManager;
         this.configManager = configManager;
@@ -22,7 +24,7 @@ public class PlayerQuitListener implements Listener {
         Player player = event.getPlayer();
 
         // Return if "save hiding state" is set to false
-        if(!configManager.getBoolean("SaveHidingState"))
+        if(!configManager.getSaveHidingState())
             return;
 
         stateManager.saveHidingState(player);
