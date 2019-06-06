@@ -1,5 +1,6 @@
 package de.romian.hideplayers;
 
+import de.romian.hideplayers.listener.PlayerInteractListener;
 import de.romian.hideplayers.listener.PlayerJoinListener;
 import de.romian.hideplayers.listener.PlayerQuitListener;
 import de.romian.hideplayers.manager.ConfigManager;
@@ -42,6 +43,7 @@ public class HidePlayers extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new PlayerJoinListener(configManager, itemManager, stateManager), this);
         Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(stateManager, configManager), this);
         Bukkit.getPluginManager().registerEvents(new VisibleManager(stateManager), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerInteractListener(itemManager, stateManager, visibleManager), this);
 
         // Send message to console when plugin was loaded
         Bukkit.getConsoleSender().sendMessage(prefix + enablingMessage);

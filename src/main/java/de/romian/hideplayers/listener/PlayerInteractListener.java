@@ -6,6 +6,7 @@ import de.romian.hideplayers.manager.VisibleManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -30,24 +31,29 @@ public class PlayerInteractListener implements Listener {
         Player player = event.getPlayer();
         ItemStack itemInHandStack = player.getInventory().getItemInMainHand();
 
-        if(event.getClickedBlock() == null) return;
+        // Return if no item in hand
         if(itemInHandStack == null) return;
 
-        if(itemInHandStack == itemManager.getHideItem() || itemInHandStack == itemManager.getShowStack()) {
+        // If player do right click
+        if(event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
 
-            itemManager.changeItem(player);
+            if (itemInHandStack == itemManager.getHideItem() || itemInHandStack == itemManager.getShowStack()) {
 
-            // Check hiding state and hide or show online players
-            if(stateManager.getHidingState(player) == 1) {
+                itemManager.changeItem(player);
 
-                visibleManager.hidePlayer(player);
+                // Check hiding state and hide or show online players
+                if (stateManager.getHidingState(player) == 1) {
 
-            } else {
+                    visibleManager.hidePlayer(player);
 
-                visibleManager.showPlayer(player);
+                } else {
+
+                    visibleManager.showPlayer(player);
+                }
+
+                stateManager.changeHidingState(player);
+
             }
-
-            stateManager.changeHidingState(player);
 
         }
 
